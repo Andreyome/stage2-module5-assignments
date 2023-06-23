@@ -37,8 +37,10 @@ public class LocalProcessor {
 
     @ListIteratorAnnotation
     public void listIterator(LinkedList<String> stringList) {
-        stringArrayList = new LinkedList<>(stringList);
-        stringArrayList.forEach(System.out::println);
+        if(stringList.size()!=0) {
+            stringArrayList = new LinkedList<>(stringList);
+            stringArrayList.forEach(System.out::println);
+        }
     }
 
     @FullNameProcessorGeneratorAnnotation
