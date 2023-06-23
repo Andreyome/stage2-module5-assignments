@@ -37,7 +37,7 @@ public class LocalProcessor {
     }
 
     @ListIteratorAnnotation
-    public void listIterator(LinkedList<String> stringList) {
+    public void listIterator(List<String> stringList) {
         stringList.stream().filter(Objects::nonNull)
                 .mapToInt(Objects::hashCode)
                 .forEach(System.out::println);
