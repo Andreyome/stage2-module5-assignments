@@ -17,11 +17,11 @@ import lombok.Setter;
 @Setter
 public class LocalProcessor {
     private StringBuilder processorName;
-    private Long period = 10000000000000L;
+    private Long period = 10_000_000_000_000L;
     protected StringBuilder processorVersion;
     private Integer valueOfCheap;
-    Scanner informationScanner;
-    private static List<String> stringArrayList = new LinkedList<>();
+    private Scanner informationScanner;
+    private List<String> stringArrayList = new LinkedList<>();
 
     public LocalProcessor(StringBuilder processorName, Long period, StringBuilder processorVersion, Integer valueOfCheap,
                           Scanner informationScanner, List<String> stringArrayList) {
