@@ -42,7 +42,6 @@ public class LocalProcessor {
                 .mapToInt(Objects::hashCode)
                 .forEach(System.out::println);
     }
-    }
 
     @FullNameProcessorGeneratorAnnotation
     public String fullNameProcessorGenerator(LinkedList<String> stringList) {
