@@ -43,9 +43,11 @@ public class LocalProcessor {
 
     @FullNameProcessorGeneratorAnnotation
     public String fullNameProcessorGenerator(LinkedList<String> stringList) {
-stringArrayList = new LinkedList<>(stringList);
-stringArrayList.forEach(str ->processorName.append(str).append(" "));
-return String.valueOf(processorName);
+        if(stringList.size() !=0) {
+            stringArrayList = new LinkedList<>(stringList);
+            stringArrayList.forEach(str -> processorName.append(str).append(" "));
+        }
+            return String.valueOf(processorName);
     }
 
     @ReadFullProcessorNameAnnotation
@@ -54,7 +56,9 @@ return String.valueOf(processorName);
             try {
                 informationScanner = new Scanner(file);
                 while (informationScanner.hasNext()) {
-                    processorVersion.append(informationScanner.nextLine());
+                    if(informationScanner.nextLine() !=null) {
+                        processorVersion.append(informationScanner.nextLine());
+                    }
                 }
             }
             catch(FileNotFoundException e){
